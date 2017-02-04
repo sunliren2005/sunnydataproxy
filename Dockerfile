@@ -19,5 +19,4 @@ RUN \
 EXPOSE 80
 EXPOSE 443
 
-RUN	service apache2 start
-CMD tail -f /var/log/apache2/error.log
+CMD service apache2 restart && tail -f /var/log/apache2/error.log
